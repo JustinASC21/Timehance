@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBxkQcexSgRIsi-4F0Wg5yYRjSvfWxZRPU",
+    authDomain: "timehancetodolist.firebaseapp.com",
+    projectId: "timehancetodolist",
+    storageBucket: "timehancetodolist.appspot.com",
+    messagingSenderId: "241035214226",
+    appId: "1:241035214226:web:0c61dc23630a5e099dd54b",
+    measurementId: "G-MZKSW45F8F"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+    <title>ToDo Page</title>
+    <link rel="stylesheet" href="todoStyle.css">
+    <script src="todoScript.js" defer></script>
+
+</head>
+<header><nav>
+    <div class = "navbar">
+      <div class="navButtons">
+        <a href="index.html">HOME</a>
+      </div>
+      <div class="navButtons"><a href="#">
+        CALENDER
+      </a>
+    </div>
+      <div class="navButtons">
+        <a href="#">TIPS</a>
+      </div>
+      <div class="navButtons">
+        <a href="#">TIMER</a>
+      </div>
+      <div class="navButtons">
+        <a href="#">CONTACT</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<body>
+    <h1>Welcome to the To Do List!</h1>
+    <br>
+    <div id = "todoTable">
+        <h4>To Do List</h4>
+        <ol id = "ourList">
+        </ol>
+        <div id = "inputForm">
+            <form>
+                <input type = "text" id = "input" placeholder="Enter to-do">
+                
+                    <!-- here we have add buttons and delete buttons -->
+                <button id = "addB">Add</button>
+                <br>
+                <br>
+
+                <input type = "number" id = "numInput" placeholder="Remove Item #_">
+                <button id = "removeB">Remove</button>
+                
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
