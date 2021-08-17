@@ -1,0 +1,19 @@
+#top {
+    background-color: green;
+    border: 5px greenyellow solid;
+    display: flex;
+    justify-content: space-evenly;
+    }
+    
+    .Logo {
+      width: 100px;
+      height: 100px;
+      float: left;
+      
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+        
+    }

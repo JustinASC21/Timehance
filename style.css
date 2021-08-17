@@ -79,4 +79,71 @@ nav ul li a:hover::before {
   width: 100%;
 }
 
+/* Parallax Scrolling */
 
+body {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #666;
+}
+
+
+.firstImg, .secondImg {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.firstImg {
+  background-image: url("images/questionMark.jpeg");
+  min-height: 100vh;
+}
+
+.secondImg {
+  background-image: url("images/how.jpeg");
+  min-height: 70vh;
+ }
+
+
+.section {
+   text-align: center;
+   padding: 50px 80px;
+ }
+
+#light {
+  background-color: #f4f4f4;
+  color: #666;
+}
+
+#dark {
+  background-color: #282e34;
+  color: #ddd;
+}
+
+
+.pText {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.pText .border {
+  background-color: #111;
+  color: white;
+  padding: 20px;
+}
+
+.pText .border.trans {
+  background-color: transparent;
+}

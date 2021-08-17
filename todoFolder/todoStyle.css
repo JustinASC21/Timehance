@@ -1,0 +1,109 @@
+#top {
+background-color: green;
+border: 5px greenyellow solid;
+display: flex;
+justify-content: space-evenly;
+}
+.Logo {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+#inputs {
+  width: 205vh;
+  height: 45vh;
+  text-align: center;
+}
+#numInput {
+  margin-left: 2%;
+}
+input {
+  height: 8%;
+  border-radius: 15px;
+  font-size: 18px;
+  width: 15%;
+  text-align: center;
+}
+/* .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+.popup .popupText {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class when hovering over the popup container */
+
+  /* .popup  {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  } */
+  
+  /* Add animation (fade in the popup) */
+  /* @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  } */ 
+
+body {
+  background-color: lightcyan ;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    
+}
+h4 {
+    font-size: 20px;
+    padding-left: 20px;
+    color: darkblue;
+    border-bottom: grey 2px solid;
+}
+button {
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border-radius: 12px;
+    height: 10%;
+}
+li {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 5px;
+}
+li:hover {
+    opacity: 0.7;
+    }
