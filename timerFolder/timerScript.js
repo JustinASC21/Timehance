@@ -172,7 +172,8 @@ Sbutton.onclick = function(event) {
 
 
         if (parseInt(totalTime) == -2) {
-            alert("Finished!");
+            let myAudio = document.querySelector("audio")
+            myAudio.play();
             countdown.innerHTML = "00:00:00";
             stop();
         }
@@ -211,8 +212,9 @@ startButton.onclick = function(event) {
     function myTime() {
         let hours = Math.floor(count/3600);
         let minutes = Math.floor((count-hours*3600) / 60)
+        let seconds = count % 60;
         
-        countingTime.innerHTML = DoubleDigits(hours) + ":" + DoubleDigits(minutes) + ":" + DoubleDigits(count);
+        countingTime.innerHTML = DoubleDigits(hours) + ":" + DoubleDigits(minutes) + ":" + DoubleDigits(seconds);
         count++;
         if (timeRunning) {
             // console.log("running")
@@ -240,17 +242,14 @@ resumeButton.onclick = function(event) {
 
     let count = hours + minutes + seconds;
 
-    console.log(hours)
-    console.log(minutes)
-    console.log(seconds)
-    console.log(count)
     timeRunning = true;
     Stopwatchreset = false;
     function myTime() {
         let hours = Math.floor(count/3600);
         let minutes = Math.floor((count-hours*3600) / 60)
+        let seconds = count % 60;
         
-        countingTime.innerHTML = DoubleDigits(hours) + ":" + DoubleDigits(minutes) + ":" + DoubleDigits(count);
+        countingTime.innerHTML = DoubleDigits(hours) + ":" + DoubleDigits(minutes) + ":" + DoubleDigits(seconds);
         count++;
         if (timeRunning) {
         }
