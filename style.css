@@ -47,6 +47,9 @@ nav ul li {
 
   position: relative;  
 }
+nav ul li a:hover {
+  animation: popAbove .5s forwards;
+}
 
 nav ul li a {
   color: #444;
@@ -139,11 +142,36 @@ body {
 }
 
 .pText .border {
-  background-color: #111;
+  background-color: lightgreen;
   color: white;
   padding: 20px;
 }
 
+.pText .border.color {
+  animation: changeColor 5s linear infinite;
+}
+
 .pText .border.trans {
   background-color: transparent;
+}
+
+@keyframes changeColor {
+  0% {
+    background-color: lightgreen;
+  }
+
+  50% {
+    background-color: orange;
+  }
+
+  100% {
+    background-color: lightgreen;
+  }
+}
+
+
+@keyframes popAbove {
+  from {font-size: 16px}
+  to {font-size: 21px}
+  
 }

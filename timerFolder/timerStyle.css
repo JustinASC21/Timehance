@@ -1,65 +1,4 @@
 /* Navbar and hover animation */
-header {
-
-    background-color: #55d6aa;
-    
-  } 
-  header::after {
-    content: '';
-    display: table;
-    clear: both;
-  
-  }
-  .navbar {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-  }
-  .Logo {
-    float: left;
-    width: 5%;
-    height: auto;
-    padding: 10px 0;
-    height: 50px;
-  }
-  nav {
-    float: right;
-  }
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  nav ul li {
-    display: inline-block;
-    margin-left: 70px;
-    padding-top: 25px;
-    position: relative;  
-  }
-  nav ul li a {
-    color: #444;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-  }
-  nav ul li a:hover {
-    color: #000;
-  }
-  nav ul li a::before {
-    content: '';
-    display:  block;
-    height: 5px;
-    width: 100%;
-    background-color: #444;
-    position: absolute;
-    top: 0;
-    width: 0%;
-  
-    transition: all ease-out 250ms;
-  }
-  nav ul li a:hover::before {
-    width: 100%;
-  }
   /* End navbar and hover animation */
   #MainPage {
         display: flex;
@@ -68,12 +7,22 @@ header {
       width: 30vh;
       height: 80vh;
   }
-  #clockPage {
-    width: 180vh;   
-    height: 80vh; 
-}
 body {
   background-color: lightcyan;
+}
+.Logo {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+#top {
+  background-color: green;
+border: 5px greenyellow solid;
+display: flex;
+justify-content: space-around;
+}
+h1 {
+  color: white;
 }
 .navDivs {
     height: 20%;
@@ -96,14 +45,42 @@ body {
     height: 80vh; 
     /* text-align: center*/;
 }
-/* #timerPage div {
-    transform: translateY(500%);
-} */
+#clockPage {
+  width: 180vh;   
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+#clockPage div {
+  
+  font-family: verdana;
+  font-size: 32px;
+
+}
+#rollingTime {
+  color: orange;
+}
+#stopwatchTime {
+  color: orange;
+  font-size: 36px;
+}
 #stopwatchPage {
     display: none;
     width: 180vh;   
     height: 80vh; 
-
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#stopwatchPage button {
+  margin: 1%;
+  background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border-radius: 12px;
+    height: 5%;
 }
 span {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -115,8 +92,9 @@ a {
 }
 #countdown {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 30px;
+    font-size: 32px;
     text-align: center;
+    color: orange;
 }
 #timerPage div {
     width: 100%;
@@ -124,7 +102,7 @@ a {
     margin: none;
 }
 #timerPage input {
-    width: 10%;
+    width: 15%;
     height: 10%;
 }
 .timerChildren {
@@ -132,11 +110,20 @@ a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 24px;
 }
-@keyframes fadeOut {
-    from {opacity: 1}
-    to {opacity: 0}
+#timerPage button {
+  background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border-radius: 12px;
+    height: 8%;
 }
-@keyframes fadeIn {
-    from {opacity: 0}
-    to {opacity: 1}
+@keyframes ColorfadeOut {
+    from {background-color: lightcyan}
+    to {background-color: lightyellow}
+}
+@keyframes ColorfadeIn {
+    from {background-color: lightyellow}
+    to {background-color: lightcyan}
 }

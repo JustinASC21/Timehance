@@ -7,6 +7,9 @@ let resetTimerValue = false;
 let clockNav = document.querySelector("#clockDiv");
 let stopwatchNav = document.querySelector("#stopwatchDiv");
 let timerNav = document.querySelector("#timerDiv");
+// body
+let body = document.querySelector("body");
+let lightCyan = true;
 
 // time pages
 let clockPage = document.querySelector("#clockPage")
@@ -38,6 +41,7 @@ clockNav.onclick = function(event) {
     timerPage.style.display = "none";
     stopwatchPage.style.display = "none";
     clockPage.style.display = "block";
+    clockPage.style.display = "flex";
     function displayTime() {
 
         let worldTimeValue = new Date();
@@ -61,6 +65,18 @@ clockNav.onclick = function(event) {
     
             rollingTime.innerHTML = DoubleDigits(parseHour(currentHour)) + ":" + DoubleDigits(currentMinute) + ":" + DoubleDigits(currentSecond) + " am";
         }
+        if (currentSecond == 58) {
+            // here we provide animation
+            if (lightCyan) {
+
+                body.style.animation = "ColorfadeOut 4s forwards";
+                lightCyan = !lightCyan;
+            }
+            else {
+                body.style.animation = "ColorfadeIn 4s forwards";
+                lightCyan = !lightCyan;
+            }
+        }
     }
     setInterval(displayTime,1000);
 }
@@ -69,6 +85,7 @@ stopwatchNav.onclick = function(event) {
     clockPage.style.display = "none";
     timerPage.style.display = "none";
     stopwatchPage.style.display = "block";
+    stopwatchPage.style.display = "flex";
 
 }
 
